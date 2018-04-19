@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{54E39EAB-C3B6-4094-A88F-A39C4BC4C1E6}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OOPConcepts</RootNamespace>
+    <AssemblyName>OOPConcepts</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Castle.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Core.4.2.0\lib\net45\Castle.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Castle.Windsor, Version=4.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Windsor.4.1.0\lib\net45\Castle.Windsor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Elasticsearch.Net, Version=6.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d, processorArchitecture=MSIL">
+      <HintPath>..\packages\Elasticsearch.Net.6.0.0\lib\net45\Elasticsearch.Net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Nest, Version=6.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d, processorArchitecture=MSIL">
+      <HintPath>..\packages\NEST.6.0.0\lib\net45\Nest.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ninject, Version=4.0.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.4.0.0-beta-0134\lib\net45\Ninject.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AbstractClass.cs" />
+    <Compile Include="AbstractFactory\AnimalWorld.cs" />
+    <Compile Include="AbstractFactory\Bison.cs" />
+    <Compile Include="AbstractFactory\Carnivore.cs" />
+    <Compile Include="AbstractFactory\ContinentFactory.cs" />
+    <Compile Include="AbstractFactory\Herbivore.cs" />
+    <Compile Include="AbstractFactory\LahoreFactory.cs" />
+    <Compile Include="AbstractFactory\Lion.cs" />
+    <Compile Include="AbstractFactory\WahFactory.cs" />
+    <Compile Include="AbstractFactory\Wildebeest.cs" />
+    <Compile Include="AbstractFactory\Wolf.cs" />
+    <Compile Include="DesingPatterns\AdapterPattern\AdapterTestDrive.cs" />
+    <Compile Include="DesingPatterns\AdapterPattern\ITurkey.cs" />
+    <Compile Include="DesingPatterns\AdapterPattern\IDuck.cs" />
+    <Compile Include="DesingPatterns\AdapterPattern\TurkeyAdapter.cs" />
+    <Compile Include="DesingPatterns\AdapterPattern\WildTurkey.cs" />
+    <Compile Include="DesingPatterns\AdapterPattern\MallardDuck.cs" />
+    <Compile Include="DesingPatterns\DecoratorPattern\BakeryComponent.cs" />
+    <Compile Include="DesingPatterns\DecoratorPattern\PastryBase.cs" />
+    <Compile Include="DesingPatterns\DecoratorPattern\CakeBase.cs" />
+    <Compile Include="DesingPatterns\DecoratorPattern\Decorator.cs" />
+    <Compile Include="DesingPatterns\DecoratorPattern\BakeryShop.cs" />
+    <Compile Include="DesingPatterns\DecoratorPattern\Decorations.cs" />
+    <Compile Include="DI\OperationEvent.cs" />
+    <Compile Include="DI\EventViewerLogger.cs" />
+    <Compile Include="DI\FileLogger.cs" />
+    <Compile Include="DI\IErrorLogger.cs" />
+    <Compile Include="DI\WindsorInstaller.cs" />
+    <Compile Include="NinjetDI\ILogging.cs" />
+    <Compile Include="NinjetDI\IWeapon.cs" />
+    <Compile Include="NinjetDI\Logging.cs" />
+    <Compile Include="NinjetDI\Ninja.cs" />
+    <Compile Include="NinjetDI\Binding.cs" />
+    <Compile Include="PolymaphicBehaviour.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StaticConstructor.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DesingPatterns\AdapterPattern\ClassDiagram.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
